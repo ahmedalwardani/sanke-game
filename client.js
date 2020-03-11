@@ -13,11 +13,11 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("Connection successfully established...");
     conn.write("Name: AAA");
-  });
-  // interpret incoming data as text
-  conn.setEncoding("utf8");
+    // interpret incoming data as text
+    conn.setEncoding("utf8");
 
-  return conn;
+    return conn;
+  });
 };
 
 module.exports = {connect};
